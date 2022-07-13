@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/template.js"></script>
+</head>
+
+<body>
+    <div id="user-info"></div>
+    <script type="text/html" id="tdl-tmp">
+        <div>年龄：{{name}}</div>
+        <div>年龄：{{age}}</div>
+        <div>年龄：{{sex}}</div>
+        <div>年龄：{{address}}</div>
+    </script>
+    <script>
+
+        // 定义数据
+        var data={name:'zs',age:23, sex:'女',address:'山东德州'}
+        // 调用函数
+        var htmlstr=template('tdl-tmp',data)
+        // 渲染html页面
+        document.getElementById('user-info').innerHTML=htmlstr
+
+        
+    </script>
+    
+</body>
+</html>
